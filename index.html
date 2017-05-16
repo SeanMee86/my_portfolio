@@ -15,6 +15,7 @@
 <link href="style/css/color/green.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,700,600,500,300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href="style/type/fontello.css" rel="stylesheet">
 <link href="style/type/budicons.css" rel="stylesheet">
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -28,6 +29,13 @@
     }
     .topBuffer{
       margin-top: 8%;
+    }
+    .smallText{
+      font-size: 2em;
+      font-family: 'Roboto', sans-serif;
+    }
+    .textShadow{
+      text-shadow: 3px 2px 6px black;
     }
   </style>
 </head>
@@ -73,8 +81,8 @@
       <div class="fullscreenbanner">
         <ul>
           <li data-transition="fade"> <img src="style/images/dummy.png" alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="repeat">
-            <h1 class="tp-caption caption large sfb" data-x="center" data-y="center" data-voffset="-25" data-speed="900" data-start="1000" data-endspeed="100" data-easing="Sine.easeOut">Greetings</h1>
-            <h1 class="tp-caption small tp-fade fadeout tp-resizeme" data-x="center" data-y="center" data-voffset="25" data-speed="100"
+            <h1 class="tp-caption caption large sfb textShadow" data-x="center" data-y="center" data-voffset="-25" data-speed="900" data-start="1000" data-endspeed="100" data-easing="Sine.easeOut">Hi I'm Sean</h1>
+            <h1 class="tp-caption smallText tp-fade fadeout tp-resizeme textShadow" data-x="center" data-y="center" data-voffset="25" data-speed="100"
 			data-start="1500"
 			data-easing="Power4.easeOut"
 			data-splitin="chars"
@@ -83,8 +91,12 @@
 			data-endelementdelay="0"
 			data-endspeed="100"
 			data-endeasing="Power1.easeOut"
-			style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">My name is Sean Mee and I specialize in web and application development.</h1>
-            <div class="arrow smooth"><a href="#skills"><i class="icon-down-open-big"></i></a></div>
+			style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">I specialize in database management and server-side engineering.</h1>
+            <div class="arrow smooth">
+              <a href="#skills">
+                <i class="icon-down-open-big"></i>
+              </a>
+            </div>
           </li>
         </ul>
         <div class="tp-bannertimer"></div>
@@ -154,7 +166,7 @@
         <div id="grid-container" class="cbp-l-grid-masonry">
           <ul>
             <li class="cbp-item frame architecture"> <a class="cbp-caption cbp-singlePage" href="ajax/post1.html">
-              <div class="cbp-caption-defaultWrap"> <img src="style/images/art/pa1.jpg" alt=""> </div>
+              <div class="cbp-caption-defaultWrap"> <img src="style/images/oladaa.png" alt=""> </div>
               <div class="cbp-caption-activeWrap">
                 <div class="cbp-l-caption-alignCenter">
                   <div class="cbp-l-caption-body">
@@ -165,7 +177,7 @@
               </a> 
             </li>
             <li class="cbp-item frame macro"> <a class="cbp-caption cbp-singlePage" href="ajax/post2.html">
-              <div class="cbp-caption-defaultWrap"> <img src="style/images/art/pm1.jpg" alt=""> </div>
+              <div class="cbp-caption-defaultWrap"> <img src="style/images/grab_a_beer.png" alt=""> </div>
               <div class="cbp-caption-activeWrap">
                 <div class="cbp-l-caption-alignCenter">
                   <div class="cbp-l-caption-body">
@@ -176,7 +188,7 @@
               </a> 
             </li>
             <li class="cbp-item frame portrait"> <a class="cbp-caption cbp-singlePage" href="ajax/post3.html">
-              <div class="cbp-caption-defaultWrap"> <img src="style/images/art/pp1.jpg" alt=""> </div>
+              <div class="cbp-caption-defaultWrap"> <img src="style/images/shaolin_busters.png" alt=""> </div>
               <div class="cbp-caption-activeWrap">
                 <div class="cbp-l-caption-alignCenter">
                   <div class="cbp-l-caption-body">
@@ -243,7 +255,6 @@
           </ul>
         </div>
         <!-- /.cbp-l-grid-masonry -->
-        <div class="cbp-l-loadMore-button"> <a href="ajax/port1-more.html" class="cbp-l-loadMore-button-link btn">LOAD MORE</a> </div>
       </div>
       <!-- /.box --> 
     </section>
