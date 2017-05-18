@@ -3345,3 +3345,27 @@ textarea {
 	    margin: -25px -25px 25px -25px
 	}
 }
+/*-----------------------------------------------------------------------------------*/
+/*	26. EXTRA
+/*-----------------------------------------------------------------------------------*/
+    .skillLogo{
+        height: 9vh;
+    }
+    .topBuffer{
+        margin-top: 8%;
+    }
+    .smallText{
+        font-size: 2em;
+        font-family: 'Roboto', sans-serif;
+    }
+    .textShadow{
+        text-shadow: 3px 2px 6px black;
+    }
+    .liveLink{
+        position: absolute;
+        left: 25%;
+    }
+    .gitLink{
+        position: absolute;
+        right: 25%;
+    }
