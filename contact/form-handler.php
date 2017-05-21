@@ -80,7 +80,7 @@ function sendEmail($subject, $content, $emailto, $emailfrom) {
 		$headers .= "Content-Transfer-Encoding: quoted-printable\r\n";
 		
 		// Send email
-		$mail_sent = @mail($emailto, $subject, $body, $headers);
+		$mail_sent = mail($emailto, $subject, $body, $headers);
 		$response = $mail_sent ? $response_sent : $response_error;
 		
 	}
