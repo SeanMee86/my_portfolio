@@ -1,7 +1,6 @@
 
 
 $(document).ready(function () {
-    addInfo();
     $(document).click(function (event) {
         var clickover = $(event.target);
         var $navbar = $(".navbar-collapse");
@@ -11,6 +10,8 @@ $(document).ready(function () {
             $navbar.collapse('hide');
         }
     });
+    addInfo();
+    // $('.submit').click(sendEmail);
 "use strict";
 	/*-----------------------------------------------------------------------------------*/
 	/*	VIDEO
@@ -494,6 +495,9 @@ var instagramFeed = new Instafeed({
 $('#instafeed').each(function() {
     instagramFeed.run();
 });
+/*--------------------------------------------------------------------*/
+/* EXTRAS
+/*--------------------------------------------------------------------*/
 function addInfo(){
     var address = "<p>16371 Birdie ln."+"<br />"+"Huntington Beach, CA 92649</p>";
     $('#address').append(address);
@@ -504,3 +508,25 @@ function addInfo(){
     var email = "<p>"+"<a class="+"nocolor"+" href="+"mailto:sean.mee86@yahoo.com"+">sean.mee86@yahoo.com</a>"+"<br />"+"<a class="+"nocolor"+" href="+"mailto:seanmee8186@gmail.com"+">seanmee8186@gmail.com</a></p>";
     $('#email').append(email);
 }
+
+// function sendEmail(){
+//     console.log("button clicked");
+//     $.ajax({
+//         data: {
+//             email: $('input .email').val(),
+//             subject: $('input .subject').val(),
+//             name: $('input .name'),
+//             message: $('textarea .text-area').val()
+//         },
+//         contentType: false,
+//         processData: false,
+//         url: "../../portfolio/contact/form-handler.php",
+//         method: "POST",
+//         success: function(resp){
+//             console.log("On success: ", resp);
+//         },
+//         error: function(err){
+//             console.log("On error: ", err);
+//         }
+//     })
+// }

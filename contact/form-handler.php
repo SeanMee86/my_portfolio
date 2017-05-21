@@ -1,99 +1,47 @@
 <?php
-include('SMTPClass.php');
+require_once('emailconfig.php');
+require('phpmailer/PHPMailer/PHPMailerAutoload.php');
+$mail = new PHPMailer;
+$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$use_smtp = '0';
-$emailto = 'sean.mee86@yahoo.com';
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
 
-	// retrieve from parameters
-	$emailfrom = isset($_POST["email"]) ? $_POST["email"] : "";
-	$nocomment = isset($_POST["nocomment"]) ? $_POST["nocomment"] : "";
-	$subject = 'Email from Lumos';
-	$message = '';
-	$response = '';
-	$response_fail = 'There was an error verifying your details.';
-	
-		// Honeypot captcha
-		if($nocomment == '') {
-		
-			$params = $_POST;
-			foreach ( $params as $key=>$value ){
-			
-				if(!($key == 'ip' || $key == 'emailsubject' || $key == 'url' || $key == 'emailto' || $key == 'nocomment' || $key == 'v_error' || $key == 'v_email')){
-				
-					$key = ucwords(str_replace("-", " ", $key));
-					
-					if ( gettype( $value ) == "array" ){
-						$message .= "$key: \n";
-						foreach ( $value as $two_dim_value )
-						$message .= "...$two_dim_value<br>";
-					}else {
-						$message .= $value != '' ? "$key: $value\n" : '';
-					}
-				}
-			}
-			
-		$response = sendEmail($subject, $message, $emailto, $emailfrom);
-			
-		} else {
-		
-			$response = $response_fail;
-		
-		}
 
-	echo $response;
+$mail->Username = EMAIL_USER;                 // SMTP username
+$mail->Password = EMAIL_PASS;                 // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                                    // TCP port to connect to
+$options = array(
+    'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true
+    )
+);
+$mail->smtpConnect($options);
+$mail->From = $_POST["email"];//your email sending account
+$mail->FromName = $_POST["name"];//your email sending account name
+$mail->addAddress(/*your email address, or the email the sender if you are sending confirmation*/"seanmee1986@gmail.com", "Sean Mee"/*email address user name*/);     // Add a recipient
+//$mail->addAddress('ellen@example.com');               // Name is optional
+$mail->addReplyTo(/*email address of the person sending the message, so you can reply*/$_POST["email"]);
+//$mail->addCC('cc@example.com');
+//$mail->addBCC('bcc@example.com');
 
-// Run server-side validation
-function sendEmail($subject, $content, $emailto, $emailfrom) {
-	
-	$from = $emailfrom;
-	$response_sent = 'Thank you. Your messsage has been received.';
-	$response_error = 'Error. Please try again.';
-	$subject =  filter($subject);
-	$url = "Origin Page: ".$_SERVER['HTTP_REFERER'];
-	$ip = "IP Address: ".$_SERVER["REMOTE_ADDR"];
-	$message = $content."\n$ip\r\n$url";
-	
-	// Validate return email & inform admin
-	$emailto = filter($emailto);
+//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->isHTML(true);                                  // Set email format to HTML
 
-	// Setup final message
-	$body = wordwrap($message);
-	
-	if($use_smtp == '1'){
-	
-		$SmtpServer = 'SMTP SERVER';
-		$SmtpPort = 'SMTP PORT';
-		$SmtpUser = 'SMTP USER';
-		$SmtpPass = 'SMTP PASSWORD';
-		
-		$to = $emailto;
-		$SMTPMail = new SMTPClient ($SmtpServer, $SmtpPort, $SmtpUser, $SmtpPass, $from, $to, $subject, $body);
-		$SMTPChat = $SMTPMail->SendMail();
-		$response = $SMTPChat ? $response_sent : $response_error;
-		
-	} else {
-		
-		// Create header
-		$headers = "From: $from\r\n";
-		$headers .= "MIME-Version: 1.0\r\n";
-		$headers .= "Content-type: text/plain; charset=utf-8\r\n";
-		$headers .= "Content-Transfer-Encoding: quoted-printable\r\n";
-		
-		// Send email
-		$mail_sent = @mail($emailto, $subject, $body, $headers);
-		$response = $mail_sent ? $response_sent : $response_error;
-		
-	}
-	return $response;
+$mail->Subject = $_POST["subject"];
+$mail->Body    = $_POST["message"];
+//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+//
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent';
 }
-
-// Remove any un-safe values to prevent email injection
-function filter($value) {
-	$pattern = array("/\n/", "/\r/", "/content-type:/i", "/to:/i", "/from:/i", "/cc:/i");
-	$value = preg_replace($pattern, "", $value);
-	return $value;
-}
-
 exit;
-
 ?>
