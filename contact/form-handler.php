@@ -44,6 +44,7 @@ $emailto = 'seanmee8186@gmail.com';
 
 // Run server-side validation
 function sendEmail($subject, $content, $emailto, $emailfrom) {
+    global $use_smtp;
 	
 	$from = $emailfrom;
 	$response_sent = 'Thank you. Your messsage has been received.';
