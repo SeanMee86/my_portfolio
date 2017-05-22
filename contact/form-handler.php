@@ -79,6 +79,8 @@ function sendEmail($subject, $content, $emailto, $emailfrom) {
 		$headers .= "MIME-Version: 1.0\r\n";
 		$headers .= "Content-type: text/plain; charset=utf-8\r\n";
 		$headers .= "Content-Transfer-Encoding: quoted-printable\r\n";
+        $headers .= "X-Priority: 3\r\n";
+        $headers .= "X-Mailer: PHP". phpversion() ."\r\n";
 		
 		// Send email
 		$mail_sent = mail($emailto, $subject, $body, $headers);
