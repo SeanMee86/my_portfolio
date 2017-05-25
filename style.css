@@ -3361,11 +3361,24 @@ textarea {
     .textShadow{
         text-shadow: 3px 2px 6px black;
     }
-    .liveLink{
+    .liveLink {
         position: absolute;
-        left: 25%;
+        left: 10%;
     }
-    .gitLink{
+    .gitLink {
         position: absolute;
-        right: 25%;
+        right: 10%;
+    }
+    .about{
+        text-align: justify;
+    }
+    p.cbp-l-caption-title.captionTitle {
+        position: absolute;
+        left: 50%;
+        top: 12%;
+        transform: translate(-50%,0);
+    }
+    .captionLink{
+    width: 35%;
+    bottom: 5%;
     }
