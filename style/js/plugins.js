@@ -564,6 +564,7 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 			// Declare the function variables:
 			var formAction = $(this).attr('action');
 			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+			var inputReg = /[a-zA-Z]/;
 			var textError = $('.v-error', this).val();
 			var textEmail = $('.v-email', this).val();
 			var $error = $('<span class="error"></span>');
@@ -598,7 +599,7 @@ d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defa
 					var label = $(this).attr('title');
 					var inputVal = $(this).val();
 					var $parentTag = $(this).parent();
-					if(inputVal == ''){
+					if(!inputReg.test(inputVal)){
 						$parentTag.addClass('error').append($error.clone().text(textError));
 					}
 			
