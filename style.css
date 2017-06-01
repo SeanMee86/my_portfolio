@@ -3382,3 +3382,10 @@ textarea {
     width: 35%;
     bottom: 5%;
     }
+
+    @media only screen and (max-width: 500px){
+        .smallText{
+            font-size: 45px;
+        }
+    }
+
