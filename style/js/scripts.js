@@ -495,8 +495,8 @@ $('#instafeed').each(function() {
     instagramFeed.run();
 });
 function addInfo(){
-    var address = "<p>16371 Birdie ln."+"<br />"+"Huntington Beach, CA 92649</p>";
-    $('#address').append(address);
+    // var address = "<p>16371 Birdie ln."+"<br />"+"Huntington Beach, CA 92649</p>";
+    // $('#address').append(address);
     var home_phone = "<p>1 (714) 840 0841</p>";
     $('#home_phone').append(home_phone);
     var cell_phone = "<p>1 (714) 726 3823</p>";
