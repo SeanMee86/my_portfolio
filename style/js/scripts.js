@@ -501,6 +501,6 @@ function addInfo(){
     $('#home_phone').append(home_phone);
     var cell_phone = "<p>1 (714) 726 3823</p>";
     $('#cell_phone').append(cell_phone);
-    var email = "<p>"+"<a class="+"nocolor"+" href="+"mailto:sean.mee86@yahoo.com"+">sean.mee86@yahoo.com</a>"+"<br />"+"<a class="+"nocolor"+" href="+"mailto:seanmee8186@gmail.com"+">seanmee8186@gmail.com</a></p>";
+    var email = "<p>"+"<a class="+"nocolor"+" href="+"mailto:seanmeedev@gmail.com"+">seanmeedev@gmail.com</a>"+"<br /></p>";
     $('#email').append(email);
 }
