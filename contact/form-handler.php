@@ -8,8 +8,8 @@ $emailto = 'seanmeedev@gmail.com';
 	$emailfrom = isset($_POST["email"]) ? $_POST["email"] : "";
 	$nocomment = isset($_POST["nocomment"]) ? $_POST["nocomment"] : "";
 	$subject = isset($_POST["subject"]) ? $_POST["subject"] : "";
-	$message = isset($_POST["message"]) ? $_POST["message"] : "";
-	$message .= "\n".$emailfrom;
+//	$message = isset($_POST["message"]) ? $_POST["message"] : "";
+    $message = '';
 	$response = '';
 	$response_fail = 'There was an error verifying your details.';
 	
