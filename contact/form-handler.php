@@ -15,22 +15,22 @@ $emailto = 'seanmeedev@gmail.com';
 		// Honeypot captcha
 		if($nocomment == '') {
 		
-			$params = $_POST;
-			foreach ( $params as $key=>$value ){
-			
-				if(!($key == 'ip' || $key == 'emailsubject' || $key == 'url' || $key == 'emailto' || $key == 'nocomment' || $key == 'v_error' || $key == 'v_email')){
-				
-					$key = ucwords(str_replace("-", " ", $key));
-					
-					if ( gettype( $value ) == "array" ){
-						$message .= "$key: \n";
-						foreach ( $value as $two_dim_value )
-						$message .= "...$two_dim_value<br>";
-					}else {
-						$message .= $value != '' ? "$key: $value\n" : '';
-					}
-				}
-			}
+//			$params = $_POST;
+//			foreach ( $params as $key=>$value ){
+//
+//				if(!($key == 'ip' || $key == 'emailsubject' || $key == 'url' || $key == 'emailto' || $key == 'nocomment' || $key == 'v_error' || $key == 'v_email')){
+//
+//					$key = ucwords(str_replace("-", " ", $key));
+//
+//					if ( gettype( $value ) == "array" ){
+//						$message .= "$key: \n";
+//						foreach ( $value as $two_dim_value )
+//						$message .= "...$two_dim_value<br>";
+//					}else {
+//						$message .= $value != '' ? "$key: $value\n" : '';
+//					}
+//				}
+//			}
 			
 		$response = sendEmail($subject, $message, $emailto, $emailfrom);
 			
