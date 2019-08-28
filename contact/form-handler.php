@@ -9,29 +9,29 @@ $emailto = 'seanmeedev@gmail.com';
 	$nocomment = isset($_POST["nocomment"]) ? $_POST["nocomment"] : "";
 	$subject = isset($_POST["subject"]) ? $_POST["subject"] : "";
 	$message = isset($_POST["message"]) ? $_POST["message"] : "";
-	$message .= '\n'.$emailfrom;
+	$message .= "\n".$emailfrom;
 	$response = '';
 	$response_fail = 'There was an error verifying your details.';
 	
 		// Honeypot captcha
 		if($nocomment == '') {
 		
-//			$params = $_POST;
-//			foreach ( $params as $key=>$value ){
-//
-//				if(!($key == 'ip' || $key == 'emailsubject' || $key == 'url' || $key == 'emailto' || $key == 'nocomment' || $key == 'v_error' || $key == 'v_email')){
-//
-//					$key = ucwords(str_replace("-", " ", $key));
-//
-//					if ( gettype( $value ) == "array" ){
-//						$message .= "$key: \n";
-//						foreach ( $value as $two_dim_value )
-//						$message .= "...$two_dim_value<br>";
-//					}else {
-//						$message .= $value != '' ? "$key: $value\n" : '';
-//					}
-//				}
-//			}
+			$params = $_POST;
+			foreach ( $params as $key=>$value ){
+
+				if(!($key == 'ip' || $key == 'emailsubject' || $key == 'url' || $key == 'emailto' || $key == 'nocomment' || $key == 'v_error' || $key == 'v_email')){
+
+					$key = ucwords(str_replace("-", " ", $key));
+
+					if ( gettype( $value ) == "array" ){
+						$message .= "$key: \n";
+						foreach ( $value as $two_dim_value )
+						$message .= "...$two_dim_value<br>";
+					}else {
+						$message .= $value != '' ? "$key: $value\n" : '';
+					}
+				}
+			}
 			
 		$response = sendEmail($subject, $message, $emailto, $emailfrom);
 			
