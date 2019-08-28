@@ -1,7 +1,8 @@
 <?php
+include ('SMTPClass.php');
 
-$use_smtp = '0';
-$emailto = 'seanmeemeedev@gmail.com';
+$use_smtp = '1';
+$emailto = 'sean@seanmeedevworld.com';
 
 	// retrieve from parameters
 	$emailfrom = isset($_POST["email"]) ? $_POST["email"] : "";
@@ -82,7 +83,7 @@ function sendEmail($subject, $content, $emailto, $emailfrom) {
 		
 		// Send email
 		$mail_sent = mail($emailto, $subject, $body, $headers);
-		$response = $mail_sent ? $response_sent : $response_error.' Nope didn\'t work'.$mail_sent;
+		$response = $mail_sent ? $response_sent : $response_error;
 		
 	}
 	return $response;
