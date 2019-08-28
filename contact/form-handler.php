@@ -9,6 +9,7 @@ $emailto = 'seanmeedev@gmail.com';
 	$nocomment = isset($_POST["nocomment"]) ? $_POST["nocomment"] : "";
 	$subject = isset($_POST["subject"]) ? $_POST["subject"] : "";
 	$message = isset($_POST["message"]) ? $_POST["message"] : "";
+	$message .= '\n'.$emailfrom;
 	$response = '';
 	$response_fail = 'There was an error verifying your details.';
 	
