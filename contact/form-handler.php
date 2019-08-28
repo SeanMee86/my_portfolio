@@ -1,8 +1,8 @@
 <?php
 include ('SMTPClass.php');
 
-$use_smtp = '1';
-$emailto = 'sean@seanmeedevworld.com';
+$use_smtp = '0';
+$emailto = 'seanmeedev@gmail.com';
 
 	// retrieve from parameters
 	$emailfrom = isset($_POST["email"]) ? $_POST["email"] : "";
@@ -75,7 +75,7 @@ function sendEmail($subject, $content, $emailto, $emailfrom) {
 	} else {
 		
 		// Create header
-		$headers = "From: $from\r\n";
+		$headers = "From: sean@seanmeedevworld.com\r\n";
 		$headers .= "MIME-Version: 1.0\r\n";
 		$headers .= "Content-type: text/plain; charset=utf-8\r\n";
 		$headers .= "Content-Transfer-Encoding: quoted-printable\r\n";
