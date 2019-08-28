@@ -1,3 +1,5 @@
-body nav .navbar-header .navbar-brand img {
-    width: 75%;
+@media screen and (min-width: 1271px) {
+    body nav .navbar-header .navbar-brand img {
+        width: 75%;
+    }
 }
