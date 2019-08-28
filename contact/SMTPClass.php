@@ -26,7 +26,7 @@ $this->body = $body;
 function SendMail ()
 {
 
-	if ($SMTPIN = fsockopen ($this->SmtpServer, $this->PortSMTP)) 
+	if ($SMTPIN = fsockopen ($this->SmtpServer, intval($this->PortSMTP)))
 	{
 	
            fputs ($SMTPIN, "EHLO ".$HTTP_HOST."\r\n");  
