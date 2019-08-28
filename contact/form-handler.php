@@ -70,7 +70,7 @@ function sendEmail($subject, $content, $emailto, $emailfrom) {
 		$to = $emailto;
 		$SMTPMail = new SMTPClient ($SmtpServer, $SmtpPort, $SmtpUser, $SmtpPass, $from, $to, $subject, $body);
 		$SMTPChat = $SMTPMail->SendMail();
-		$response = $SMTPChat ? $response_sent : $response_error;
+		$response = $SMTPChat ? $response_sent : $response_error.$;
 		
 	} else {
 		

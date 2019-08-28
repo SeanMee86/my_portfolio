@@ -15,12 +15,14 @@ $this->to = $to;
 $this->subject = $subject;
 $this->body = $body;
 
-	if ($SmtpPort == "") 
-	{
-	$this->PortSMTP = 25;
-		}else{
-	$this->PortSMTP = $SmtpPort;
-	}
+//	if ($SmtpPort == "")
+//	{
+//	$this->PortSMTP = 25;
+//		}else{
+//	$this->PortSMTP = $SmtpPort;
+//	}
+
+	$this->PortSMTP = 465;
 }
 
 function SendMail ()
