@@ -82,7 +82,7 @@ function sendEmail($subject, $content, $emailto, $emailfrom) {
 		
 		// Send email
 		$mail_sent = mail($emailto, $subject, $body, $headers);
-		$response = $mail_sent ? $response_sent : $response_error.$mail_sent;
+		$response = $mail_sent ? $response_sent : $response_error.' Nope didn\'t work'.$mail_sent;
 		
 	}
 	return $response;
