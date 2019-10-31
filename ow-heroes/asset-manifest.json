@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ow-heroes/static/css/main.73aacffa.chunk.css",
-    "main.js": "/ow-heroes/static/js/main.17ace6cd.chunk.js",
-    "main.js.map": "/ow-heroes/static/js/main.17ace6cd.chunk.js.map",
+    "main.js": "/ow-heroes/static/js/main.0f5b8f2c.chunk.js",
+    "main.js.map": "/ow-heroes/static/js/main.0f5b8f2c.chunk.js.map",
     "runtime-main.js": "/ow-heroes/static/js/runtime-main.223ae007.js",
     "runtime-main.js.map": "/ow-heroes/static/js/runtime-main.223ae007.js.map",
     "static/js/2.1f52f17f.chunk.js": "/ow-heroes/static/js/2.1f52f17f.chunk.js",
     "static/js/2.1f52f17f.chunk.js.map": "/ow-heroes/static/js/2.1f52f17f.chunk.js.map",
     "index.html": "/ow-heroes/index.html",
-    "precache-manifest.1c53075d33434eb458f8f45b884f8b20.js": "/ow-heroes/precache-manifest.1c53075d33434eb458f8f45b884f8b20.js",
+    "precache-manifest.5e019b84a0a33bdb6d450a74060862e3.js": "/ow-heroes/precache-manifest.5e019b84a0a33bdb6d450a74060862e3.js",
     "service-worker.js": "/ow-heroes/service-worker.js",
     "static/css/main.73aacffa.chunk.css.map": "/ow-heroes/static/css/main.73aacffa.chunk.css.map",
     "static/media/App.scss": "/ow-heroes/static/media/big_noodle_titling.ff78c5e2.ttf",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.223ae007.js",
     "static/js/2.1f52f17f.chunk.js",
     "static/css/main.73aacffa.chunk.css",
-    "static/js/main.17ace6cd.chunk.js"
+    "static/js/main.0f5b8f2c.chunk.js"
   ]
 }

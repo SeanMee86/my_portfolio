@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "130d2e4acba195fa79e4f5f6bd22fd47",
+    "revision": "67502d99fa6402f54c112668ed908032",
     "url": "/ow-heroes/index.html"
   },
   {
-    "revision": "7ade118358813b8e6df9",
+    "revision": "b9159729269af0f8d5cb",
     "url": "/ow-heroes/static/css/main.73aacffa.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ow-heroes/static/js/2.1f52f17f.chunk.js"
   },
   {
-    "revision": "7ade118358813b8e6df9",
-    "url": "/ow-heroes/static/js/main.17ace6cd.chunk.js"
+    "revision": "b9159729269af0f8d5cb",
+    "url": "/ow-heroes/static/js/main.0f5b8f2c.chunk.js"
   },
   {
     "revision": "078a8ae381e642aca9f7",
