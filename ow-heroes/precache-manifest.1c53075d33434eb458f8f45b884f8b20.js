@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d9304805aa341290ccbdc2881e6f54d0",
+    "revision": "130d2e4acba195fa79e4f5f6bd22fd47",
     "url": "/ow-heroes/index.html"
   },
   {
