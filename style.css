@@ -3374,6 +3374,7 @@ textarea {
     }
     p.cbp-l-caption-title.captionTitle {
         position: absolute;
+        white-space: nowrap;
         left: 50%;
         top: 12%;
         transform: translate(-50%,0);

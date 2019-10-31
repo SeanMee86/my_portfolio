@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ow-heroes/static/css/main.e8a48eff.chunk.css",
+    "main.js": "/ow-heroes/static/js/main.bc71e954.chunk.js",
+    "main.js.map": "/ow-heroes/static/js/main.bc71e954.chunk.js.map",
+    "runtime-main.js": "/ow-heroes/static/js/runtime-main.223ae007.js",
+    "runtime-main.js.map": "/ow-heroes/static/js/runtime-main.223ae007.js.map",
+    "static/js/2.1f52f17f.chunk.js": "/ow-heroes/static/js/2.1f52f17f.chunk.js",
+    "static/js/2.1f52f17f.chunk.js.map": "/ow-heroes/static/js/2.1f52f17f.chunk.js.map",
+    "index.html": "/ow-heroes/index.html",
+    "precache-manifest.ea8b87ec6a04645417ddd1e599f43984.js": "/ow-heroes/precache-manifest.ea8b87ec6a04645417ddd1e599f43984.js",
+    "service-worker.js": "/ow-heroes/service-worker.js",
+    "static/css/main.e8a48eff.chunk.css.map": "/ow-heroes/static/css/main.e8a48eff.chunk.css.map",
+    "static/media/App.scss": "/ow-heroes/static/media/big_noodle_titling.ff78c5e2.ttf",
+    "static/media/big_noodle_titling_oblique.ttf": "/ow-heroes/static/media/big_noodle_titling_oblique.52629e48.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.223ae007.js",
+    "static/js/2.1f52f17f.chunk.js",
+    "static/css/main.e8a48eff.chunk.css",
+    "static/js/main.bc71e954.chunk.js"
+  ]
+}
